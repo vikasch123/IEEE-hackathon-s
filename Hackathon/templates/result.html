@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            position: relative; 
+            background-image: url(https://img.freepik.com/free-vector/gradient-world-health-day-background_23-2149309101.jpg?w=1060&t=st=1710594197~exp=1710594797~hmac=0551f884e426543bad19dcc2d5c42ab2c270addcde12be044a71ba0b578f629c);
+            backdrop-filter: blur(7px);
+            background-size: cover;
+            background-position: center center;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #f5f0f0;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 8px 6px 10px rgb(6 17 64);
+            background-color: #5a758e;
+        }
+
+        .result{
+            background-color: #569ae0;
+        }
+
+        h1 {
+            color: #333;
+            background-color: rgb(232, 176, 127);
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        .smallbox{
+            border-radius: 5px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            padding-right: 10px;
+            padding-left: 10px;
+            background-color: #e6d9cb;
+
+        }
+        p {
+            color: #555;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-top: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Styling for the fixed logo */
+        .fixed-logo {
+            position: fixed;
+            bottom: 10px; 
+            right: 10px; 
+            width: 70px; 
+            height: auto; 
+            opacity: 0.7; 
+            filter: contrast(200%);
+            
+        }
+        .fixed-logo {
+            position: fixed;
+            bottom: 10px; 
+            right: 10px; 
+            width: 70px; 
+            height: auto; 
+            opacity: 0.7; 
+            filter: contrast(200%);
+            
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="result">
+            {% if predicted_label == 'stress' %}
+</div>
+<div class="smallbox">
+    <h1>Result : Stress</h1>
+   
+        <p>Hi user, based on your answers, you seem to be stressed. Here are some resources that may help:</p>
+        <ol>
+            <li>Practice deep breathing exercises.</li>
+            <li>Try meditation or mindfulness techniques.</li>
+            <li>Exercise regularly to reduce stress.</li>
+            <li>Talk to a counselor or therapist for support.</li>
+        </ol>
+    </div>
+    <div class="result">
+    {% elif predicted_label == 'anxiety' %}</div>
+    <div class="smallbox">
+        <h1>Result : Anxiety</h1>
+        <p>Hi user, based on your answers, you seem to be experiencing anxiety. Here are some resources that may help:</p>
+        <ol>
+            <li>Practice deep breathing exercises.</li>
+            <li>Engage in relaxation techniques like progressive muscle relaxation.</li>
+            <li>Seek support from friends, family, or a therapist.</li>
+            <li>Consider cognitive-behavioral therapy (CBT) techniques.</li>
+        </ol>
+    </div>
+    <div class="result">
+    {% elif predicted_label == 'depression' %}</div>
+    <div class="smallbox">
+        <h1>Result : Depression</h1>
+        <p>Hi user, based on your answers, you seem to be experiencing depression. Here are some resources that may help:</p>
+        <ol>
+            <li>Reach out to a mental health professional for support and guidance.</li>
+            <li>Consider therapy options such as cognitive-behavioral therapy (CBT) or interpersonal therapy (IPT).</li>
+            <li>Engage in activities you enjoy and find fulfilling.</li>
+            <li>Connect with supportive friends and family members.</li>
+        </ol>
+    </div>
+    {% else %}
+        <p>Hi user, based on your answers, you seem to be managing stress well. Keep it up!</p>
+    {% endif %}
+</div>
+<img src="..\static\logo123.png" alt="Logo" class="fixed-logo">
+</body>
+</html>
